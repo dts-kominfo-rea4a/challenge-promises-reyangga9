@@ -1,7 +1,7 @@
 const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
-const promiseOutput = (emosi) => {
+const promiseOutput = async (emosi) => {
   let hasil =0;
 
   return new Promise (async(resolve)=>{
@@ -10,6 +10,7 @@ const promiseOutput = (emosi) => {
       data.forEach(data => {
         if(data.hasil === emosi){
           hasil++;
+          
         }
       })
     });
@@ -21,8 +22,10 @@ const promiseOutput = (emosi) => {
         }
       })
     });
+    
   resolve(hasil);
   })
+ 
 };
 
 
